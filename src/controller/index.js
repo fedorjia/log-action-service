@@ -1,6 +1,5 @@
 const express = require('express')
 const router = express.Router({mergeParams: true})
-const { promisify } = require('util')
 const { body, validationResult } = require('express-validator/check')
 
 const service = require('../service/logger')
