@@ -13,7 +13,7 @@ router.post('', [
 	body('method', 'method required').trim().isLength({ min: 1 }),
 	// 请求的内容，例如: {"query": {"name":"fedor"}, "body": {}}
 	body('content', 'content required').trim().isLength({ min: 1 }),
-	body('created_by', 'created_by required').trim().isLength({ min: 1 })
+	body('account', 'account required').trim().isLength({ min: 1 })
 ], async (req, res, next) => {
 	try {
 		const errors = validationResult(req)
@@ -28,7 +28,7 @@ router.post('', [
 			url: body.url,
 			method: body.method,
 			content: body.content,
-			created_by: body.created_by
+			account: body.account
 		})
 
 		return res.success(true)
