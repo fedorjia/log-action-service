@@ -6,7 +6,7 @@ const setting = {
 	mongo : {
 		host:"localhost",
 		port: 27017,
-		dbname: "t_action_log"
+		dbname: "action_log"
 	},
 }
 
